@@ -1,13 +1,5 @@
----
 - hosts: all
-  become: yes
+  sudo: yes
   tasks:
-  - name: Install Nginx Latest
-    yum:
-      name: nginx
-      state: latest
-  - name: Start Nginx
-    service:
-      name: nginx
-      state: started
-      
+    - name: install apache2
+      apt: name=apache2 update_cache=yes state=latest
