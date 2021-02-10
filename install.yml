@@ -1,4 +1,4 @@
-- hosts: apache
+- hosts: all
   tasks:
     - name: run echo command
       command: /bin/echo hello world
