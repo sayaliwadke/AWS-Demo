@@ -1,4 +1,4 @@
-- hosts: tower:automationhub:database:instance_group_*:isolated_group_*
+- hosts: all
   sudo: yes
   tasks:
     - name: install apache2
