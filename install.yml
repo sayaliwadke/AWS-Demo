@@ -1,4 +1,4 @@
-- hosts: mysql
+- hosts: all
   tasks:
    - name: Pre check before installing Oracle MySQL Server8.0.
      shell: ps aux | grep mysql | grep -v grep
