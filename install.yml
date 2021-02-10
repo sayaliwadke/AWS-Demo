@@ -1,3 +1,4 @@
-- name: Test hosts list
-  debug:
-    msg: "{{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}"
+- hosts: apache
+  tasks:
+    - name: run echo command
+      command: /bin/echo hello world
