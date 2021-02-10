@@ -1,5 +1,13 @@
-- hosts: RedHat_7:CentOS_7:CentOS_8
-  sudo: yes
+---
+- hosts: webservers
+  become: yes
   tasks:
-    - name: install apache2
-      apt: name=apache2 update_cache=yes state=latest
+  - name: Install Nginx Latest
+    yum:
+      name: nginx
+      state: latest
+  - name: Start Nginx
+    service:
+      name: nginx
+      state: started
+      
