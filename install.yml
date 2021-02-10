@@ -1,7 +1,2 @@
-- hosts: all
-  tasks:
-   - name: Pre check before installing Oracle MySQL Server8.0.
-     shell: ps aux | grep mysql | grep -v grep
-     ignore_errors: yes
-     register: mysql_proc_status
-       
+ -tasks:
+    - action: ping
